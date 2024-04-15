@@ -28,7 +28,7 @@
 			
 		선택된 값을 배열에 넣은 후 map으로 넘긴 경우 
 	 --%>
-	 <form action="${pageContext.request.contextPath}/check.emp" method="post">
+	 <form action="${pageContext.request.contextPath}/checkcount.emp" method="post">
 	 	<label>부서번호</label>
 	 	<input type="checkbox" name="deptno" value="10">10
 	 	<input type="checkbox" name="deptno" value="20">20

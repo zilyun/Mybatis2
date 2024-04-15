@@ -3,6 +3,7 @@ package org.hta.emp.controller;
 import java.io.IOException;
 
 import org.hta.emp.action.Check;
+import org.hta.emp.action.CheckCount;
 import org.hta.emp.action.Term;
 import org.hta.emp.action.Term2;
 import org.hta.emp.action.Term3;
@@ -56,6 +57,9 @@ public class FrontController extends jakarta.servlet.http.HttpServlet {
 			break;
 			case "/check.emp":
 				action = new Check();
+			break;
+			case "/checkcount.emp":
+				action = new CheckCount();
 			break;
 		} // switch (command)
 		

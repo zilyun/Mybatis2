@@ -68,4 +68,20 @@
 		</if>
 		order by deptno
 	</select>
+	
+	<select id="deptnocheckcount" resultType="map" parameterType="map">
+		select deptno, count(deptno) cnt 
+		from emp
+		<if test="deptnos != null">
+			where deptno in 
+			<foreach collection="deptnos" item="data"
+					 open="("
+					 separator=","
+					 close=")">
+				 #{data}
+			</foreach>
+		</if>
+		group by deptno
+		order by deptno
+	</select>
 </mapper>

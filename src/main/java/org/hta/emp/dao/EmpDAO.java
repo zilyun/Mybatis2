@@ -70,4 +70,15 @@ public class EmpDAO {
 		return list;
 	}
 
+	public List<Map<String, Integer>> getCount(Map<String, Object> map) {
+		List<Map<String, Integer>> list = null;
+		try(SqlSession session = getSession()) {
+			list = session.selectList("deptnocheckcount", map);
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+			e.printStackTrace();
+		}
+		return list;
+	}
+
 }
